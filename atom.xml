@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>薄暮JIM的小窝</title>
   
-  <subtitle>[object Object]</subtitle>
+  
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
@@ -10,7 +10,7 @@
   <id>http://yoursite.com/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>薄暮JIM</name>
     
   </author>
   
@@ -23,15 +23,14 @@
     <published>2020-04-30T02:23:02.126Z</published>
     <updated>2020-04-30T02:34:04.351Z</updated>
     
+    <content type="html"><![CDATA[<p>总算是通过自己的学习搭建了属于自己的博客网站，虽然说步骤也不是怎么的困难但是也是通过自己的课外学习成功搭建出来了，关于MarkDown格式我之前有所耳闻但是一直没有系统地学习过，那么就从今天开始学习并且慢慢地搭建属于自己的博客吧！</p><p>“博观而约取,厚积而薄发”，这是大诗人苏轼的感悟，学习也就像是搭积木的过程，只有自己每一天不断的积累，才能有所收获，学习知识不是一蹴而就的。</p><p>MarkDown语言使用帮助：<a href="https://mazhuang.org/markdown-intro/" target="_blank" rel="noopener">https://mazhuang.org/markdown-intro/</a></p>]]></content>
+    
     <summary type="html">
     
       
       
-        
-        
-          &lt;p&gt;总算是通过自己的学习搭建了属于自己的博客网站，虽然说步骤也不是怎么的困难但是也是通过自己的课外学习成功搭建出来了，关于MarkDown格式我之前有所耳闻但是一直没有系统地学习过，那么就从今天开始学习并且慢慢地搭建属于自己的博客吧！&lt;/p&gt;
+        &lt;p&gt;总算是通过自己的学习搭建了属于自己的博客网站，虽然说步骤也不是怎么的困难但是也是通过自己的课外学习成功搭建出来了，关于MarkDown格式我之前有所耳闻但是一直没有系统地学习过，那么就从今天开始学习并且慢慢地搭建属于自己的博客吧！&lt;/p&gt;
 &lt;p&gt;“博观而约取,厚积而薄发”，
-        
       
     
     </summary>
@@ -47,14 +46,13 @@
     <published>2020-04-29T08:50:20.314Z</published>
     <updated>2020-04-29T08:50:20.315Z</updated>
     
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
     <summary type="html">
     
       
       
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
       
     
     </summary>
