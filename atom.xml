@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-01T01:03:17.316Z</updated>
+  <updated>2020-05-01T07:56:01.073Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,16 +21,14 @@
     <link href="http://yoursite.com/2020/05/01/IDEA%E5%85%A8%E5%B1%80%E6%90%9C%E7%B4%A2/"/>
     <id>http://yoursite.com/2020/05/01/IDEA%E5%85%A8%E5%B1%80%E6%90%9C%E7%B4%A2/</id>
     <published>2020-04-30T23:56:16.000Z</published>
-    <updated>2020-05-01T01:03:17.316Z</updated>
+    <updated>2020-05-01T07:56:01.073Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="使用步骤说明"><a href="#使用步骤说明" class="headerlink" title="使用步骤说明"></a>使用步骤说明</h2><h3 id="1、Ctrl-N按名字搜索类"><a href="#1、Ctrl-N按名字搜索类" class="headerlink" title="1、Ctrl+N按名字搜索类"></a>1、Ctrl+N按名字搜索类</h3><p>相当于eclipse的ctrl+shift+R，输入类名可以定位到这个类文件，就像idea在其它的搜索部分的表现一样，搜索类名也能对你所要搜索的内容多个部分进行匹配，而且如果能匹配的自己写的类，优先匹配自己写的类，甚至不是自己写的类也能搜索。</p><h3 id="2、Ctrl-Shift-N按文件名搜索文件"><a href="#2、Ctrl-Shift-N按文件名搜索文件" class="headerlink" title="2、Ctrl+Shift+N按文件名搜索文件"></a>2、Ctrl+Shift+N按文件名搜索文件</h3><p>同搜索类类似，只不过可以匹配所有类型的文件了。</p><h3 id="3、Ctrl-H"><a href="#3、Ctrl-H" class="headerlink" title="3、Ctrl+H"></a>3、Ctrl+H</h3><p>查看类的继承关系，例如HashMap的父类是AbstractMap，子类则有一大堆。</p><h3 id="4、Ctrl-Alt-B查看子类方法实现"><a href="#4、Ctrl-Alt-B查看子类方法实现" class="headerlink" title="4、Ctrl+Alt+B查看子类方法实现"></a>4、Ctrl+Alt+B查看子类方法实现</h3><p>Ctrl+B可以查看父类或父方法定义，但是不如ctrl+鼠标左键方便。但是在这里，Ctrl+B或ctrl+鼠标左键只能看见Map接口的抽象方法put的定义，不是我们想要的，这时候Ctrl+Alt+B就可以查看HashMap的put方法。</p><h3 id="5、Alt-F7查找类或方法在哪被使用"><a href="#5、Alt-F7查找类或方法在哪被使用" class="headerlink" title="5、Alt+F7查找类或方法在哪被使用"></a>5、Alt+F7查找类或方法在哪被使用</h3><p>相当于eclipse的ctrl+shif+H,但是速度快得多。</p><h3 id="6、Ctrl-F-Ctrl-Shift-F按照文本的内容查找"><a href="#6、Ctrl-F-Ctrl-Shift-F按照文本的内容查找" class="headerlink" title="6、Ctrl+F/Ctrl+Shift+F按照文本的内容查找"></a>6、Ctrl+F/Ctrl+Shift+F按照文本的内容查找</h3><p>相当于eclipse的ctrl+H，速度优势更加明显。其中Ctrl+F是在本页查找，Ctrl+Shift+F是全局查找。</p><h3 id="7、Shift-Shift搜索任何东西"><a href="#7、Shift-Shift搜索任何东西" class="headerlink" title="7、Shift+Shift搜索任何东西"></a>7、Shift+Shift搜索任何东西</h3><p>shift+shift非常强大，可搜索类、资源、配置项、方法等，还能搜索路径。其中搜索路径非常实用，例如你写了一个功能叫hello，在java，js，css，jsp中都有hello的文件夹，那我们可以搜索”hello/“找到路径中包含hello的文件夹。</p><h3 id="8、查看接口的实现类"><a href="#8、查看接口的实现类" class="headerlink" title="8、查看接口的实现类"></a>8、查看接口的实现类</h3><p>IDEA 风格 ctrl + alt +B     或者     Ctrl+Alt+鼠标左键</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="使用步骤说明"><a href="#使用步骤说明" class="headerlink" title="使用步骤说明"></a>使用步骤说明</h2><h3 id="1、Ctrl-N按名字搜索类"><a href="#1、Ctrl-N按名字搜索类" class="headerlink" title="1、Ctrl+N按名字搜索类"></a>1、Ctrl+N按名字搜索类</h3><p>相当于eclipse的ctrl+shift+R，输入类名可以定位到这个类文件，就像idea在其它的搜索部分的表现一样，搜索类名也能对你所要搜索的内容多个部分进行匹配，而且如果能匹配的自己写的类，优先匹配自己写的类，甚至不是自己写的类也能搜索。</p><h3 id="2、Ctrl-Shift-N按文件名搜索文件"><a href="#2、Ctrl-Shift-N按文件名搜索文件" class="headerlink" title="2、Ctrl+Shift+N按文件名搜索文件"></a>2、Ctrl+Shift+N按文件名搜索文件</h3><p>同搜索类类似，只不过可以匹配所有类型的文件了。</p><a id="more"></a><h3 id="3、Ctrl-H"><a href="#3、Ctrl-H" class="headerlink" title="3、Ctrl+H"></a>3、Ctrl+H</h3><p>查看类的继承关系，例如HashMap的父类是AbstractMap，子类则有一大堆。</p><h3 id="4、Ctrl-Alt-B查看子类方法实现"><a href="#4、Ctrl-Alt-B查看子类方法实现" class="headerlink" title="4、Ctrl+Alt+B查看子类方法实现"></a>4、Ctrl+Alt+B查看子类方法实现</h3><p>Ctrl+B可以查看父类或父方法定义，但是不如ctrl+鼠标左键方便。但是在这里，Ctrl+B或ctrl+鼠标左键只能看见Map接口的抽象方法put的定义，不是我们想要的，这时候Ctrl+Alt+B就可以查看HashMap的put方法。</p><h3 id="5、Alt-F7查找类或方法在哪被使用"><a href="#5、Alt-F7查找类或方法在哪被使用" class="headerlink" title="5、Alt+F7查找类或方法在哪被使用"></a>5、Alt+F7查找类或方法在哪被使用</h3><p>相当于eclipse的ctrl+shif+H,但是速度快得多。</p><h3 id="6、Ctrl-F-Ctrl-Shift-F按照文本的内容查找"><a href="#6、Ctrl-F-Ctrl-Shift-F按照文本的内容查找" class="headerlink" title="6、Ctrl+F/Ctrl+Shift+F按照文本的内容查找"></a>6、Ctrl+F/Ctrl+Shift+F按照文本的内容查找</h3><p>相当于eclipse的ctrl+H，速度优势更加明显。其中Ctrl+F是在本页查找，Ctrl+Shift+F是全局查找。</p><h3 id="7、Shift-Shift搜索任何东西"><a href="#7、Shift-Shift搜索任何东西" class="headerlink" title="7、Shift+Shift搜索任何东西"></a>7、Shift+Shift搜索任何东西</h3><p>shift+shift非常强大，可搜索类、资源、配置项、方法等，还能搜索路径。其中搜索路径非常实用，例如你写了一个功能叫hello，在java，js，css，jsp中都有hello的文件夹，那我们可以搜索”hello/“找到路径中包含hello的文件夹。</p><h3 id="8、查看接口的实现类"><a href="#8、查看接口的实现类" class="headerlink" title="8、查看接口的实现类"></a>8、查看接口的实现类</h3><p>IDEA 风格 ctrl + alt +B     或者     Ctrl+Alt+鼠标左键</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h2 id=&quot;使用步骤说明&quot;&gt;&lt;a href=&quot;#使用步骤说明&quot; class=&quot;headerlink&quot; title=&quot;使用步骤说明&quot;&gt;&lt;/a&gt;使用步骤说明&lt;/h2&gt;&lt;h3 id=&quot;1、Ctrl-N按名字搜索类&quot;&gt;&lt;a href=&quot;#1、Ctrl-N按名字搜索类&quot; class=&quot;
-      
+      &lt;h2 id=&quot;使用步骤说明&quot;&gt;&lt;a href=&quot;#使用步骤说明&quot; class=&quot;headerlink&quot; title=&quot;使用步骤说明&quot;&gt;&lt;/a&gt;使用步骤说明&lt;/h2&gt;&lt;h3 id=&quot;1、Ctrl-N按名字搜索类&quot;&gt;&lt;a href=&quot;#1、Ctrl-N按名字搜索类&quot; class=&quot;headerlink&quot; title=&quot;1、Ctrl+N按名字搜索类&quot;&gt;&lt;/a&gt;1、Ctrl+N按名字搜索类&lt;/h3&gt;&lt;p&gt;相当于eclipse的ctrl+shift+R，输入类名可以定位到这个类文件，就像idea在其它的搜索部分的表现一样，搜索类名也能对你所要搜索的内容多个部分进行匹配，而且如果能匹配的自己写的类，优先匹配自己写的类，甚至不是自己写的类也能搜索。&lt;/p&gt;
+&lt;h3 id=&quot;2、Ctrl-Shift-N按文件名搜索文件&quot;&gt;&lt;a href=&quot;#2、Ctrl-Shift-N按文件名搜索文件&quot; class=&quot;headerlink&quot; title=&quot;2、Ctrl+Shift+N按文件名搜索文件&quot;&gt;&lt;/a&gt;2、Ctrl+Shift+N按文件名搜索文件&lt;/h3&gt;&lt;p&gt;同搜索类类似，只不过可以匹配所有类型的文件了。&lt;/p&gt;
     
     </summary>
     
