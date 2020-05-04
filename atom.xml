@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-02T00:06:10.042Z</updated>
+  <updated>2020-05-04T08:46:15.303Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前路漫漫，道路还是很坎坷</title>
+    <link href="http://yoursite.com/2020/05/04/%E5%89%8D%E8%B7%AF%E6%BC%AB%E6%BC%AB%EF%BC%8C%E9%81%93%E8%B7%AF%E8%BF%98%E6%98%AF%E5%BE%88%E5%9D%8E%E5%9D%B7/"/>
+    <id>http://yoursite.com/2020/05/04/%E5%89%8D%E8%B7%AF%E6%BC%AB%E6%BC%AB%EF%BC%8C%E9%81%93%E8%B7%AF%E8%BF%98%E6%98%AF%E5%BE%88%E5%9D%8E%E5%9D%B7/</id>
+    <published>2020-05-04T08:20:35.000Z</published>
+    <updated>2020-05-04T08:46:15.303Z</updated>
+    
+    <content type="html"><![CDATA[<p>有的时候学的越多，内心就越迷茫，自己学了那么多，当我毕业之后在工作单位还用的上吗？万一自己将来没找到工作我将来又该何去何从？特别是当我今天看了B站<a href="https://www.bilibili.com/video/BV1B7411m7qz" target="_blank" rel="noopener">“11年程序汪写给方向迷茫的java程序员”</a>这一视屏，心里的不安越加沉重，今年因为疫情原因，已经耳闻有许多互联网从业者因此而受到了波及，他们有些人如此优秀都不免被公司裁掉，那像我这样技术又不够的人前路在哪里呢？</p><p><a href="https://www.jianshu.com/p/25aa5e478a13" target="_blank" rel="noopener">程序员过了35岁，就注定只能转行了？</a>程序员也是一定程度上是算是吃青春饭的，人不免老去，都会有不中用的一天，当自己没有价值了，难道只能被迫转行？确实一想到未来，我的内心里面就没有安全感。</p><p>哎，都是我的自怨自艾，还是想太多了。继续自己的学习积累吧，至于未来，谁知道呢？</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;有的时候学的越多，内心就越迷茫，自己学了那么多，当我毕业之后在工作单位还用的上吗？万一自己将来没找到工作我将来又该何去何从？特别是当我今天看了B站&lt;a href=&quot;https://www.bilibili.com/video/BV1B7411m7qz&quot; target=&quot;_b
+      
+    
+    </summary>
+    
+    
+    
+      <category term="闲聊" scheme="http://yoursite.com/tags/%E9%97%B2%E8%81%8A/"/>
+    
+  </entry>
   
   <entry>
     <title>IDEA断点调试总结（转）</title>
