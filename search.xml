@@ -1,6 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>IDEA断点调试总结（转）</title>
+    <url>/2020/05/02/IDEA%E6%96%AD%E7%82%B9%E8%B0%83%E8%AF%95%E6%80%BB%E7%BB%93%EF%BC%88%E8%BD%AC%EF%BC%89/</url>
+    <content><![CDATA[<h1 id="IDEA调试总结（设置断点进行调试）"><a href="#IDEA调试总结（设置断点进行调试）" class="headerlink" title="IDEA调试总结（设置断点进行调试）"></a>IDEA调试总结（设置断点进行调试）</h1><p>先编译好要调试的程序。</p>
+<hr>
+<h2 id="1-设置断点"><a href="#1-设置断点" class="headerlink" title="1.设置断点"></a>1.设置断点</h2><p><img src="https://pic.downk.cc/item/5eacb3b7c2a9a83be523c3c5.png" alt="1"></p>
+<p>选定要设置断点的代码行，在行号的区域后面单击鼠标左键即可。</p>
+<hr>
+<h2 id="2-开启调试会话"><a href="#2-开启调试会话" class="headerlink" title="2.开启调试会话"></a>2.开启调试会话</h2><p><img src="https://pic.downk.cc/item/5eacb435c2a9a83be52407da.png" alt="2-1"></p>
+<p>点击红色箭头指向的小虫子，开始进入调试。</p>
+<p> <img src="https://pic.downk.cc/item/5eacb405c2a9a83be523edf2.png" alt="2"></p>
+<p>IDE下方出现Debug视图，红色的箭头指向的是现在调试程序停留的代码行，方法f2()中，程序的第11行。红色箭头悬停的区域是程序的方法调用栈区。在这个区域中显示了程序执行到断点处所调用过的所用方法，越下面的方法被调用的越早。</p>
+<a id="more"></a>
+
+<hr>
+<h2 id="3-单步调试"><a href="#3-单步调试" class="headerlink" title="3.单步调试"></a>3.单步调试</h2><h3 id="3-1-step-over"><a href="#3-1-step-over" class="headerlink" title="3.1 step over"></a>3.1 step over</h3><p><img src="https://pic.downk.cc/item/5eacb494c2a9a83be52434aa.png" alt="3"></p>
+<p>点击红色箭头指向的按钮，程序向下执行一行（如果当前行有方法调用，这个方法将被执行完毕返回，然后到下一行）</p>
+<h3 id="3-2-step-into"><a href="#3-2-step-into" class="headerlink" title="3.2 step into"></a>3.2 step into</h3><p><img src="https://pic.downk.cc/item/5eacb4c1c2a9a83be5244e38.png" alt="4"></p>
+<p>点击红色箭头指向的按钮，程序向下执行一行。如果该行有自定义方法，则运行进入自定义方法（不会进入官方类库的方法）。具体步骤如下：</p>
+<p>在自定义方法发f1()处设置断点，执行调试</p>
+<p><img src="https://pic.downk.cc/item/5eacb4c1c2a9a83be5244e38.png" alt="5"></p>
+<p>点击<img src="https://pic.downk.cc/item/5eacb502c2a9a83be5247147.png" alt="6"></p>
+<p><img src="https://pic.downk.cc/item/5eacb51bc2a9a83be5247f4d.png" alt="7"></p>
+<h3 id="3-3-Force-step-into"><a href="#3-3-Force-step-into" class="headerlink" title="3.3 Force step into"></a>3.3 Force step into</h3><p><img src="https://pic.downk.cc/item/5eacb547c2a9a83be52497e2.png" alt="8"></p>
+<p>该按钮在调试的时候能进入任何方法。</p>
+<h3 id="3-4-step-out"><a href="#3-4-step-out" class="headerlink" title="3.4 step out"></a>3.4 step out</h3><p><img src="https://pic.downk.cc/item/5eacb563c2a9a83be524a8f0.png" alt="9"></p>
+<p>如果在调试的时候你进入了一个方法(如f2())，并觉得该方法没有问题，你就可以使用stepout跳出该方法，返回到该方法被调用处的下一行语句。值得注意的是，该方法已执行完毕。</p>
+<h3 id="3-5-Drop-frame"><a href="#3-5-Drop-frame" class="headerlink" title="3.5 Drop frame"></a>3.5 Drop frame</h3><p><img src="https://pic.downk.cc/item/5eacb57fc2a9a83be524b88d.png" alt="10"></p>
+<p>点击该按钮后，你将返回到当前方法的调用处（如上图，程序会回到main()中）重新执行，并且所有上下文变量的值也回到那个时候。只要调用链中还有上级方法，可以跳到其中的任何一个方法。</p>
+<hr>
+<h2 id="4-高级调试"><a href="#4-高级调试" class="headerlink" title="4. 高级调试"></a>4. 高级调试</h2><h3 id="4-1-跨断点调试"><a href="#4-1-跨断点调试" class="headerlink" title="4.1 跨断点调试"></a>4.1 跨断点调试</h3><p>设置多个断点，开启调试。</p>
+<p><img src="https://pic.downk.cc/item/5eacb5a2c2a9a83be524cb20.png" alt="11"></p>
+<p>想移动到下一个断点，点击如下图：</p>
+<p><img src="https://pic.downk.cc/item/5eacb5b8c2a9a83be524d581.png" alt="12"></p>
+<p>程序将运行一个断点到下一个断点之间需要执行的代码。如果后面代码没有断点，再次点击该按钮将会执行完程序。</p>
+<h3 id="4-2-查看断点"><a href="#4-2-查看断点" class="headerlink" title="4.2 查看断点"></a>4.2 查看断点</h3><p><img src="https://pic.downk.cc/item/5eacb5dac2a9a83be524ea3c.png" alt="13"></p>
+<p>点击箭头指向的按钮，可以查看你曾经设置过的断点并可设置断点的一些属性。</p>
+<p><img src="https://pic.downk.cc/item/5eacb5f8c2a9a83be524f8e2.png" alt="14"></p>
+<p>箭头1指向的是你曾经设置过的断点，箭头2可以设置条件断点（满足某个条件的时候，暂停程序的执行，如 c==97）。结束调试后，应该在箭头1处把所设的断点删除(选择要删除的断点后，点击上方的红色减号）。</p>
+<h3 id="4-3-设置变量值"><a href="#4-3-设置变量值" class="headerlink" title="4.3 设置变量值"></a>4.3 设置变量值</h3><p><img src="https://pic.downk.cc/item/5eacb61bc2a9a83be5250bcd.png" alt="15"></p>
+<p>调试开始后，在红箭头指向的区域可以给指定的变量赋值（鼠标左键选择变量，右键弹出菜单选择setValue…）。这个功能可以更加快速的检测你的条件语句和循环语句。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>IDEA全局搜索</title>
+    <url>/2020/05/01/IDEA%E5%85%A8%E5%B1%80%E6%90%9C%E7%B4%A2/</url>
+    <content><![CDATA[<h2 id="使用步骤说明"><a href="#使用步骤说明" class="headerlink" title="使用步骤说明"></a>使用步骤说明</h2><h3 id="1、Ctrl-N按名字搜索类"><a href="#1、Ctrl-N按名字搜索类" class="headerlink" title="1、Ctrl+N按名字搜索类"></a>1、Ctrl+N按名字搜索类</h3><p>相当于eclipse的ctrl+shift+R，输入类名可以定位到这个类文件，就像idea在其它的搜索部分的表现一样，搜索类名也能对你所要搜索的内容多个部分进行匹配，而且如果能匹配的自己写的类，优先匹配自己写的类，甚至不是自己写的类也能搜索。</p>
+<h3 id="2、Ctrl-Shift-N按文件名搜索文件"><a href="#2、Ctrl-Shift-N按文件名搜索文件" class="headerlink" title="2、Ctrl+Shift+N按文件名搜索文件"></a>2、Ctrl+Shift+N按文件名搜索文件</h3><p>同搜索类类似，只不过可以匹配所有类型的文件了。</p>
+<a id="more"></a>
+
+<h3 id="3、Ctrl-H"><a href="#3、Ctrl-H" class="headerlink" title="3、Ctrl+H"></a>3、Ctrl+H</h3><p>查看类的继承关系，例如HashMap的父类是AbstractMap，子类则有一大堆。</p>
+<h3 id="4、Ctrl-Alt-B查看子类方法实现"><a href="#4、Ctrl-Alt-B查看子类方法实现" class="headerlink" title="4、Ctrl+Alt+B查看子类方法实现"></a>4、Ctrl+Alt+B查看子类方法实现</h3><p>Ctrl+B可以查看父类或父方法定义，但是不如ctrl+鼠标左键方便。但是在这里，Ctrl+B或ctrl+鼠标左键只能看见Map接口的抽象方法put的定义，不是我们想要的，这时候Ctrl+Alt+B就可以查看HashMap的put方法。</p>
+<h3 id="5、Alt-F7查找类或方法在哪被使用"><a href="#5、Alt-F7查找类或方法在哪被使用" class="headerlink" title="5、Alt+F7查找类或方法在哪被使用"></a>5、Alt+F7查找类或方法在哪被使用</h3><p>相当于eclipse的ctrl+shif+H,但是速度快得多。</p>
+<h3 id="6、Ctrl-F-Ctrl-Shift-F按照文本的内容查找"><a href="#6、Ctrl-F-Ctrl-Shift-F按照文本的内容查找" class="headerlink" title="6、Ctrl+F/Ctrl+Shift+F按照文本的内容查找"></a>6、Ctrl+F/Ctrl+Shift+F按照文本的内容查找</h3><p>相当于eclipse的ctrl+H，速度优势更加明显。其中Ctrl+F是在本页查找，Ctrl+Shift+F是全局查找。</p>
+<h3 id="7、Shift-Shift搜索任何东西"><a href="#7、Shift-Shift搜索任何东西" class="headerlink" title="7、Shift+Shift搜索任何东西"></a>7、Shift+Shift搜索任何东西</h3><p>shift+shift非常强大，可搜索类、资源、配置项、方法等，还能搜索路径。其中搜索路径非常实用，例如你写了一个功能叫hello，在java，js，css，jsp中都有hello的文件夹，那我们可以搜索”hello/“找到路径中包含hello的文件夹。</p>
+<h3 id="8、查看接口的实现类"><a href="#8、查看接口的实现类" class="headerlink" title="8、查看接口的实现类"></a>8、查看接口的实现类</h3><p>IDEA 风格 ctrl + alt +B     或者     Ctrl+Alt+鼠标左键</p>
+]]></content>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2020/04/29/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
@@ -29,6 +90,8 @@
 <h3 id="1、echarts-js容易使用"><a href="#1、echarts-js容易使用" class="headerlink" title="1、echarts.js容易使用"></a>1、echarts.js容易使用</h3><p>echarts.js的官方文档比较详细，而且官网中提供大量的使用示例供大家使用</p>
 <h3 id="2、echarts-js支持按需求打包"><a href="#2、echarts-js支持按需求打包" class="headerlink" title="2、echarts.js支持按需求打包"></a>2、echarts.js支持按需求打包</h3><p>echarts.js官网提供了在线构建的工具，可以在线构建项目时，选择项目所需要使用到的模块，从而达到减小JS文件的体积</p>
 <h3 id="3、echarts-js开源"><a href="#3、echarts-js开源" class="headerlink" title="3、echarts.js开源"></a>3、echarts.js开源</h3><h3 id="4、支持中国地图功能"><a href="#4、支持中国地图功能" class="headerlink" title="4、支持中国地图功能"></a>4、支持中国地图功能</h3><p>这个在其他的一些框架中是没有的，所以为这个功能点个赞</p>
+ <a id="more"></a>
+
 <p>但是echarts.js也存在着一些不好的地方，比如说：</p>
 <h3 id="1、echarts-js的体积较大"><a href="#1、echarts-js的体积较大" class="headerlink" title="1、echarts.js的体积较大"></a>1、echarts.js的体积较大</h3><p>一个基础的echarts.js都要400K左右，相对于D3.js和hightcharts.js来说都是比较大的</p>
 <h3 id="2、echarts-js的可定制性差"><a href="#2、echarts-js的可定制性差" class="headerlink" title="2、echarts.js的可定制性差"></a>2、echarts.js的可定制性差</h3><p>说到echarts.js的定制性差，其实不止是包括echarts.js，hightcharts.js也是如此，因为这一类型的数据可视化框架主要是高度的进行分装，所以你在使用的时候只需要设置一下配置就可以了，但是如果是出现了要绘制配置中不支持的图表怎么办，那么你就只能放弃，尝试着使用其他的框架了</p>
@@ -75,21 +138,14 @@
       </tags>
   </entry>
   <entry>
-    <title>IDEA全局搜索</title>
-    <url>/2020/05/01/IDEA%E5%85%A8%E5%B1%80%E6%90%9C%E7%B4%A2/</url>
-    <content><![CDATA[<h2 id="使用步骤说明"><a href="#使用步骤说明" class="headerlink" title="使用步骤说明"></a>使用步骤说明</h2><h3 id="1、Ctrl-N按名字搜索类"><a href="#1、Ctrl-N按名字搜索类" class="headerlink" title="1、Ctrl+N按名字搜索类"></a>1、Ctrl+N按名字搜索类</h3><p>相当于eclipse的ctrl+shift+R，输入类名可以定位到这个类文件，就像idea在其它的搜索部分的表现一样，搜索类名也能对你所要搜索的内容多个部分进行匹配，而且如果能匹配的自己写的类，优先匹配自己写的类，甚至不是自己写的类也能搜索。</p>
-<h3 id="2、Ctrl-Shift-N按文件名搜索文件"><a href="#2、Ctrl-Shift-N按文件名搜索文件" class="headerlink" title="2、Ctrl+Shift+N按文件名搜索文件"></a>2、Ctrl+Shift+N按文件名搜索文件</h3><p>同搜索类类似，只不过可以匹配所有类型的文件了。</p>
-<a id="more"></a>
-
-<h3 id="3、Ctrl-H"><a href="#3、Ctrl-H" class="headerlink" title="3、Ctrl+H"></a>3、Ctrl+H</h3><p>查看类的继承关系，例如HashMap的父类是AbstractMap，子类则有一大堆。</p>
-<h3 id="4、Ctrl-Alt-B查看子类方法实现"><a href="#4、Ctrl-Alt-B查看子类方法实现" class="headerlink" title="4、Ctrl+Alt+B查看子类方法实现"></a>4、Ctrl+Alt+B查看子类方法实现</h3><p>Ctrl+B可以查看父类或父方法定义，但是不如ctrl+鼠标左键方便。但是在这里，Ctrl+B或ctrl+鼠标左键只能看见Map接口的抽象方法put的定义，不是我们想要的，这时候Ctrl+Alt+B就可以查看HashMap的put方法。</p>
-<h3 id="5、Alt-F7查找类或方法在哪被使用"><a href="#5、Alt-F7查找类或方法在哪被使用" class="headerlink" title="5、Alt+F7查找类或方法在哪被使用"></a>5、Alt+F7查找类或方法在哪被使用</h3><p>相当于eclipse的ctrl+shif+H,但是速度快得多。</p>
-<h3 id="6、Ctrl-F-Ctrl-Shift-F按照文本的内容查找"><a href="#6、Ctrl-F-Ctrl-Shift-F按照文本的内容查找" class="headerlink" title="6、Ctrl+F/Ctrl+Shift+F按照文本的内容查找"></a>6、Ctrl+F/Ctrl+Shift+F按照文本的内容查找</h3><p>相当于eclipse的ctrl+H，速度优势更加明显。其中Ctrl+F是在本页查找，Ctrl+Shift+F是全局查找。</p>
-<h3 id="7、Shift-Shift搜索任何东西"><a href="#7、Shift-Shift搜索任何东西" class="headerlink" title="7、Shift+Shift搜索任何东西"></a>7、Shift+Shift搜索任何东西</h3><p>shift+shift非常强大，可搜索类、资源、配置项、方法等，还能搜索路径。其中搜索路径非常实用，例如你写了一个功能叫hello，在java，js，css，jsp中都有hello的文件夹，那我们可以搜索”hello/“找到路径中包含hello的文件夹。</p>
-<h3 id="8、查看接口的实现类"><a href="#8、查看接口的实现类" class="headerlink" title="8、查看接口的实现类"></a>8、查看接口的实现类</h3><p>IDEA 风格 ctrl + alt +B     或者     Ctrl+Alt+鼠标左键</p>
+    <title>我的第一篇博文</title>
+    <url>/2020/04/30/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/</url>
+    <content><![CDATA[<p>总算是通过自己的学习搭建了属于自己的博客网站，虽然说步骤也不是怎么的困难但是也是通过自己的课外学习成功搭建出来了，关于MarkDown格式我之前有所耳闻但是一直没有系统地学习过，那么就从今天开始学习并且慢慢地搭建属于自己的博客吧！</p>
+<p>“博观而约取,厚积而薄发”，这是大诗人苏轼的感悟，学习也就像是搭积木的过程，只有自己每一天不断的积累，才能有所收获，学习知识不是一蹴而就的。</p>
+<p>MarkDown语言使用帮助：<a href="https://mazhuang.org/markdown-intro/" target="_blank" rel="noopener">https://mazhuang.org/markdown-intro/</a></p>
 ]]></content>
       <tags>
-        <tag>技术</tag>
+        <tag>闲聊</tag>
       </tags>
   </entry>
   <entry>
@@ -102,59 +158,5 @@
       <tags>
         <tag>闲聊</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>我的第一篇博文</title>
-    <url>/2020/04/30/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/</url>
-    <content><![CDATA[<p>总算是通过自己的学习搭建了属于自己的博客网站，虽然说步骤也不是怎么的困难但是也是通过自己的课外学习成功搭建出来了，关于MarkDown格式我之前有所耳闻但是一直没有系统地学习过，那么就从今天开始学习并且慢慢地搭建属于自己的博客吧！</p>
-<p>“博观而约取,厚积而薄发”，这是大诗人苏轼的感悟，学习也就像是搭积木的过程，只有自己每一天不断的积累，才能有所收获，学习知识不是一蹴而就的。</p>
-<p>MarkDown语言使用帮助：<a href="https://mazhuang.org/markdown-intro/" target="_blank" rel="noopener">https://mazhuang.org/markdown-intro/</a></p>
-]]></content>
-      <tags>
-        <tag>闲聊</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>IDEA断点调试总结（转）</title>
-    <url>/2020/05/02/IDEA%E6%96%AD%E7%82%B9%E8%B0%83%E8%AF%95%E6%80%BB%E7%BB%93%EF%BC%88%E8%BD%AC%EF%BC%89/</url>
-    <content><![CDATA[<h1 id="IDEA调试总结（设置断点进行调试）"><a href="#IDEA调试总结（设置断点进行调试）" class="headerlink" title="IDEA调试总结（设置断点进行调试）"></a>IDEA调试总结（设置断点进行调试）</h1><p>先编译好要调试的程序。</p>
-<hr>
-<h2 id="1-设置断点"><a href="#1-设置断点" class="headerlink" title="1.设置断点"></a>1.设置断点</h2><p><img src="https://pic.downk.cc/item/5eacb3b7c2a9a83be523c3c5.png" alt="1"></p>
-<p>选定要设置断点的代码行，在行号的区域后面单击鼠标左键即可。</p>
-<hr>
-<h2 id="2-开启调试会话"><a href="#2-开启调试会话" class="headerlink" title="2.开启调试会话"></a>2.开启调试会话</h2><p><img src="https://pic.downk.cc/item/5eacb435c2a9a83be52407da.png" alt="2-1"></p>
-<p>点击红色箭头指向的小虫子，开始进入调试。</p>
-<p> <img src="https://pic.downk.cc/item/5eacb405c2a9a83be523edf2.png" alt="2"></p>
-<p>IDE下方出现Debug视图，红色的箭头指向的是现在调试程序停留的代码行，方法f2()中，程序的第11行。红色箭头悬停的区域是程序的方法调用栈区。在这个区域中显示了程序执行到断点处所调用过的所用方法，越下面的方法被调用的越早。</p>
-<a id="more"></a>
-
-<hr>
-<h2 id="3-单步调试"><a href="#3-单步调试" class="headerlink" title="3.单步调试"></a>3.单步调试</h2><h3 id="3-1-step-over"><a href="#3-1-step-over" class="headerlink" title="3.1 step over"></a>3.1 step over</h3><p><img src="https://pic.downk.cc/item/5eacb494c2a9a83be52434aa.png" alt="3"></p>
-<p>点击红色箭头指向的按钮，程序向下执行一行（如果当前行有方法调用，这个方法将被执行完毕返回，然后到下一行）</p>
-<h3 id="3-2-step-into"><a href="#3-2-step-into" class="headerlink" title="3.2 step into"></a>3.2 step into</h3><p><img src="https://pic.downk.cc/item/5eacb4c1c2a9a83be5244e38.png" alt="4"></p>
-<p>点击红色箭头指向的按钮，程序向下执行一行。如果该行有自定义方法，则运行进入自定义方法（不会进入官方类库的方法）。具体步骤如下：</p>
-<p>在自定义方法发f1()处设置断点，执行调试</p>
-<p><img src="https://pic.downk.cc/item/5eacb4c1c2a9a83be5244e38.png" alt="5"></p>
-<p>点击<img src="https://pic.downk.cc/item/5eacb502c2a9a83be5247147.png" alt="6"></p>
-<p><img src="https://pic.downk.cc/item/5eacb51bc2a9a83be5247f4d.png" alt="7"></p>
-<h3 id="3-3-Force-step-into"><a href="#3-3-Force-step-into" class="headerlink" title="3.3 Force step into"></a>3.3 Force step into</h3><p><img src="https://pic.downk.cc/item/5eacb547c2a9a83be52497e2.png" alt="8"></p>
-<p>该按钮在调试的时候能进入任何方法。</p>
-<h3 id="3-4-step-out"><a href="#3-4-step-out" class="headerlink" title="3.4 step out"></a>3.4 step out</h3><p><img src="https://pic.downk.cc/item/5eacb563c2a9a83be524a8f0.png" alt="9"></p>
-<p>如果在调试的时候你进入了一个方法(如f2())，并觉得该方法没有问题，你就可以使用stepout跳出该方法，返回到该方法被调用处的下一行语句。值得注意的是，该方法已执行完毕。</p>
-<h3 id="3-5-Drop-frame"><a href="#3-5-Drop-frame" class="headerlink" title="3.5 Drop frame"></a>3.5 Drop frame</h3><p><img src="https://pic.downk.cc/item/5eacb57fc2a9a83be524b88d.png" alt="10"></p>
-<p>点击该按钮后，你将返回到当前方法的调用处（如上图，程序会回到main()中）重新执行，并且所有上下文变量的值也回到那个时候。只要调用链中还有上级方法，可以跳到其中的任何一个方法。</p>
-<hr>
-<h2 id="4-高级调试"><a href="#4-高级调试" class="headerlink" title="4. 高级调试"></a>4. 高级调试</h2><h3 id="4-1-跨断点调试"><a href="#4-1-跨断点调试" class="headerlink" title="4.1 跨断点调试"></a>4.1 跨断点调试</h3><p>设置多个断点，开启调试。</p>
-<p><img src="https://pic.downk.cc/item/5eacb5a2c2a9a83be524cb20.png" alt="11"></p>
-<p>想移动到下一个断点，点击如下图：</p>
-<p><img src="https://pic.downk.cc/item/5eacb5b8c2a9a83be524d581.png" alt="12"></p>
-<p>程序将运行一个断点到下一个断点之间需要执行的代码。如果后面代码没有断点，再次点击该按钮将会执行完程序。</p>
-<h3 id="4-2-查看断点"><a href="#4-2-查看断点" class="headerlink" title="4.2 查看断点"></a>4.2 查看断点</h3><p><img src="https://pic.downk.cc/item/5eacb5dac2a9a83be524ea3c.png" alt="13"></p>
-<p>点击箭头指向的按钮，可以查看你曾经设置过的断点并可设置断点的一些属性。</p>
-<p><img src="https://pic.downk.cc/item/5eacb5f8c2a9a83be524f8e2.png" alt="14"></p>
-<p>箭头1指向的是你曾经设置过的断点，箭头2可以设置条件断点（满足某个条件的时候，暂停程序的执行，如 c==97）。结束调试后，应该在箭头1处把所设的断点删除(选择要删除的断点后，点击上方的红色减号）。</p>
-<h3 id="4-3-设置变量值"><a href="#4-3-设置变量值" class="headerlink" title="4.3 设置变量值"></a>4.3 设置变量值</h3><p><img src="https://pic.downk.cc/item/5eacb61bc2a9a83be5250bcd.png" alt="15"></p>
-<p>调试开始后，在红箭头指向的区域可以给指定的变量赋值（鼠标左键选择变量，右键弹出菜单选择setValue…）。这个功能可以更加快速的检测你的条件语句和循环语句。</p>
-]]></content>
   </entry>
 </search>
